@@ -23,7 +23,7 @@
     <SectionTitle v-if="awayPeople.length > 0" :action-enabled="!started">
       Away people
     </SectionTitle>
-    <PeopleList :items="awayPeople" />
+    <PeopleList :items="awayPeople" :action-enabled="!started && !finished" />
   </div>
 </template>
 
