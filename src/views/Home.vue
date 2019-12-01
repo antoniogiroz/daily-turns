@@ -5,7 +5,7 @@
       <p class="text-3xl">Total effective time</p>
       <p class="text-6xl text-gray-100">{{ dailyTotalTime | time }}</p>
     </div>
-    <Counter v-else seconds="5" @next="onNext" @start="started = true" />
+    <Counter v-else seconds="120" @next="onNext" @start="started = true" />
 
     <div v-if="!finished" class="mt-16 flex justify-center">
       <button @click="shufflePeople" class="button" :disabled="started">
