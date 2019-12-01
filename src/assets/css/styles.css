@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
+
+:focus {
+  outline: none !important;
+}
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+.button {
+  @apply w-16 h-16;
+}
+
+.button svg {
+  @apply w-10 h-10 inline fill-current text-gray-600;
+}
+
+.button:hover svg {
+  @apply text-gray-400;
+}
+
+.button:disabled {
+  @apply pointer-events-none;
+}
+
+.button:disabled svg {
+  @apply text-gray-700 pointer-events-none;
+}
+
+.button.primary {
+  @apply w-16 h-16 mx-4 bg-teal-400 shadow-lg rounded-full;
+}
+
+.button.primary svg {
+  @apply w-8 h-8 inline fill-current text-white;
+}
+
+.exceeded::before {
+  content: '-';
+  position: absolute;
+  left: -5rem;
+}
+
+.list .list__item--completed {
+  text-decoration: line-through;
+  @apply text-gray-700;
+}
+
+/* .list__action {
+  display: none;
+}
+
+.list__item:hover .list__action {
+  display: block;
+} */
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 @tailwind utilities;
