@@ -98,9 +98,6 @@ export default {
     },
 
     onNext(personTotalTime) {
-      if (personTotalTime === 0) {
-        return;
-      }
       this.availablePeople[this.currentPersonIndex].totalTime = personTotalTime;
 
       if (this.currentPersonIndex < this.availablePeople.length - 1) {

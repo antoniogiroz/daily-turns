@@ -101,6 +101,7 @@ export default {
         : this.seconds - this.totalTime;
       this.$emit('next', currentTotalTime);
       this.resetTimer();
+      this.startTimer();
     },
 
     padTime(time) {
