@@ -3,7 +3,7 @@
     <div
       class="list__item py-3 px-3 flex items-center"
       :class="{
-        'line-through text-gray-700': !!person.totalTime,
+        'line-through text-gray-700': person.totalTime !== undefined,
         'bg-gray-900 text-gray-100': index === selected
       }"
       v-for="(person, index) in items"
